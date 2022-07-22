@@ -3,7 +3,9 @@
 //! `croco.core` provides convenience functions for high level coding. 
 //! 
 //! 
-//! 
+
+mod path_mod;
+pub use path_mod::*;
 
 
 /// Get input from commandline, specify type of input and optionally provide default value at empty entry. Repeat until success.

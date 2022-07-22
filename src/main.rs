@@ -1,17 +1,9 @@
 
-use std::fs::File;
-use std::io::{ErrorKind, Read};
-use croco::input;
-
-
-fn read_text(path:String) -> String {
-    let mut f = File::open(path).unwrap();
-    let mut s = String::new();
-    f.read_to_string(&mut s).unwrap();
-    return s;
-}
+use croco::*;
 
 
 fn main() {
-    println!("Hello, world!");
+    let path1 = PathBuf::tmp_dir().collapseuser().expanduser();
+    println!("{:?}", path1);
+    println!("Finished");
 }
