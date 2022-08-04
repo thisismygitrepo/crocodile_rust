@@ -9,6 +9,7 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+cargo-modules = "0.5.10"
 dirs = "4.0.0"
 opener = "0.5.0"
 rand = "0.8.5"

@@ -1,9 +1,16 @@
 
 use croco::*;
-
+use std::ffi::OsString;
+use std::env;
 
 fn main() {
-    let path1 = PathBuf::tmp_dir().collapseuser().expanduser();
-    println!("{:?}", path1);
+
+    let mut path1 = PathBuf::from("~/file");
+    let y = Path::new("new");
+
+    // let res = path1.into_os_string().replace("~", "alex");
+    println!("{:?}", path1.canonicalize());
     println!("Finished");
+
+
 }

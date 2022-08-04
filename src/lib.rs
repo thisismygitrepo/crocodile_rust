@@ -4,6 +4,7 @@
 //! 
 //! 
 
+
 mod path_mod;
 pub use path_mod::*;
 
@@ -22,7 +23,7 @@ pub fn input<T>(msg: &str, default: Option<T>) -> T where T: core::fmt::Debug + 
         raw_input = raw_input.trim().to_string();
         if raw_input == "" && default.is_some() {break default.unwrap();};  // return default value if empty input.
         let parsed_input: Result<T, _> = raw_input.parse::<T>();
-        match parsed_input { Ok(num) => {break num;},  // return parsed input if success.
-                             Err(_err) => {println!("could not parse the input `{:#?}`", raw_input); continue;},};
+        match parsed_input {Ok(num) => {break num;},  // return parsed input if success.
+                            Err(_err) => {println!("could not parse the input `{:#?}`", raw_input); continue;},};
     }}
 
