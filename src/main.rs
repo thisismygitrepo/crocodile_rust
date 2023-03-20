@@ -12,5 +12,4 @@ fn main() {
     // let res = path1.into_os_string().replace("~", "alex");
     println!("{:?}", path1);
     println!("Finished");
-
 }
